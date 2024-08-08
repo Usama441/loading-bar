@@ -1,0 +1,110 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url(../images/loading_secreen2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+
+.loading-container {
+    width: 25%;
+    bottom: 235px;
+    max-width: 365px;
+    height: 19px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+}
+
+.loading-bar {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  
+}
+.progress {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    bottom: 32px;
+}
+
+@keyframes loading {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.hearts-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.fa-heart{
+    width: 10px;
+    height: 10px;
+    color: white;
+}
+.fa-heart:nth-child(5){
+    padding-right:8px;
+}
+.heart {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    margin: 0 5px;
+    transform: rotate(-45deg);
+    animation: bounce 1s infinite ease-in-out alternate;
+}
+.bg-color{
+    width: 0%;
+    height: 50%;
+    background-image: linear-gradient(to right,#fdb3fd,#7D0552,#780795);
+    border-radius: 10px;
+    animation: loading 5s linear infinite;
+    position: relative;
+}
+
+@media (max-width: 480px) {
+    .loading-container {
+        position: relative;
+        top: 18px;
+        width: 50%; /* Full width on very small screens */
+        padding: 10px;
+        height: 0px;
+    }
+
+    .loading-bar {
+        height: 40px;
+        position: absolute;
+        top: 0px;
+        left: 0px; /* Further reduce height */
+    }
+
+    .heart {
+        width: 20px; /* Further reduce heart size */
+        height: 20px;
+    }
+    
+}
